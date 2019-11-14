@@ -12,6 +12,7 @@ body {
 }
 .remove-site-content-margin {
 	margin-top:-30px;
+	margin-bottom: 30px;
 }
 img {
 	max-width:100%;
