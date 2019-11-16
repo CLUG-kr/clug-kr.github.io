@@ -5826,6 +5826,9 @@ button.bg-lightblue:focus {
 .float-none {
   float: none !important; }
 
+#lunrsearch{
+  text-align: center;
+}
 @media (min-width: 576px) {
   .float-sm-left {
     float: left !important; }
@@ -5843,6 +5846,9 @@ button.bg-lightblue:focus {
     float: none !important; } }
 
 @media (min-width: 992px) {
+  #lunrsearch{
+    text-align: left;
+  }
   .float-lg-left {
     float: left !important; }
   .float-lg-right {
