@@ -10,11 +10,13 @@
 		{{ post.date | date: '%Y년 %m월 %d일' }}
 	</small>
 </div>
-{% if post.image %}
 	<div class="col-md-3 pr-0 text-right">
 	<a href="{{site.baseurl}}{{post.url}}">
+	{% if post.image %}
 	<img class="w-100" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+	{% else %}
+	<img class="w-100" src="assets/images/default_thumbnail.png">
+	{% endif %}
 	</a>
 	</div>
-{% endif %}
 </div>

@@ -24,7 +24,11 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     <div class="col-md-6">
     <div class="card border-0 mb-4 box-shadow">   
     <a href="{{site.baseurl}}{{latest_post.url}}">
-    <div class="topfirstimage" style="background-image: url({% if latest_post.image contains "://" %}{{ latest_post.image }}{% else %} {{site.baseurl}}/{{ latest_post.image}}{% endif %}); height: 200px;    background-size: cover;    background-repeat: no-repeat;"></div>     
+    {% if latest_post.image %}
+    <div class="topfirstimage" style="background-image: url({% if latest_post.image contains "://" %}{{ latest_post.image }}{% else %} {{site.baseurl}}/{{ latest_post.image}}{% endif %}); height: 200px;    background-size: cover;    background-repeat: no-repeat;background-position:center;"></div>
+    {% else %}
+    <div class="topfirstimage" style="background-image: url(assets/images/default_thumbnail.png); height: 200px;    background-size: cover;    background-repeat: no-repeat;background-position:center;"></div>
+    {% endif %}
     </a>
     <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
     <h2 class="h4 font-weight-bold">
@@ -45,35 +49,39 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     <div class="col-md-6">
         
         <!-- second latest post -->
-        {%- assign second_post = site.posts[1] -%}        
-        <div class="mb-3 d-flex align-items-center">                
-                {% if second_post.image %}
-                <div class="col-md-4">
+        {%- assign second_post = site.posts[1] -%}
+        <div class="mb-3 d-flex align-items-center">
+            <div class="col-md-4">
                 <a href="{{site.baseurl}}{{second_post.url}}">
-                 <img class="w-100" src="{% if second_post.image contains "://" %}{{ second_post.image }}{% else %}{{ second_post.image | absolute_url }}{% endif %}" alt="{{ second_post.title }}">
+                    {% if second_post.image %}
+                    <img class="w-100" src="{% if second_post.image contains "://" %}{{ second_post.image }}{% else %}{{ second_post.image | absolute_url }}{% endif %}" alt="{{ second_post.title }}">
+                    {% else %}
+                    <img class="w-100" src="assets/images/default_thumbnail.png">
+                    {% endif %}
                 </a>
-                </div>
-                {% endif %}                
-                <div class="col-md-8">
-                    <h2 class="mb-2 h6 font-weight-bold">
-                    <a class="text-dark" href="{{site.baseurl}}{{second_post.url}}">{{ second_post.title }}</a>
-                    </h2>
-                    <small class="text-muted">
-                        {{ second_post.date | date: '%Y년 %m월 %d일' }}
-                    </small>
-                </div>
             </div>
-        
+            <div class="col-md-8">
+                <h2 class="mb-2 h6 font-weight-bold">
+                    <a class="text-dark" href="{{site.baseurl}}{{second_post.url}}">{{ second_post.title }}</a>
+                </h2>
+                <small class="text-muted">
+                    {{ second_post.date | date: '%Y년 %m월 %d일' }}
+                </small>
+            </div>
+        </div>
+
         <!-- third latest post -->
         {%- assign third_post = site.posts[2] -%}        
-        <div class="mb-3 d-flex align-items-center">                
-                {% if third_post.image %}
+        <div class="mb-3 d-flex align-items-center">
                 <div class="col-md-4">
-                <a href="{{site.baseurl}}{{third_post.url}}">
-                 <img class="w-100" src="{% if third_post.image contains "://" %}{{ third_post.image }}{% else %}{{site.baseurl}}/{{ third_post.image }}{% endif %}" alt="{{ third_post.title }}">
-                </a>
+                    <a href="{{site.baseurl}}{{third_post.url}}">
+                        {% if third_post.image %}
+                        <img class="w-100" src="{% if third_post.image contains "://" %}{{ third_post.image }}{% else %}{{ third_post.image | absolute_url }}{% endif %}" alt="{{ third_post.title }}">
+                        {% else %}
+                        <img class="w-100" src="assets/images/default_thumbnail.png">
+                        {% endif %}
+                    </a>
                 </div>
-                {% endif %}                
                 <div class="col-md-8">
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{third_post.url}}">{{ third_post.title }}</a>
@@ -86,14 +94,16 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
         
         <!-- fourth latest post -->
         {%- assign fourth_post = site.posts[3] -%}        
-        <div class="mb-3 d-flex align-items-center">                
-                {% if fourth_post.image %}
+        <div class="mb-3 d-flex align-items-center">
                 <div class="col-md-4">
-                <a href="{{site.baseurl}}{{fourth_post.url}}">
-                <img class="w-100" src="{% if fourth_post.image contains "://" %}{{ fourth_post.image }}{% else %}{{site.baseurl}}/{{ fourth_post.image }}{% endif %}" alt="{{ fourth_post.title }}">
-                </a>
+                    <a href="{{site.baseurl}}{{second_post.url}}">
+                        {% if fourth_post.image %}
+                        <img class="w-100" src="{% if fourth_post.image contains "://" %}{{ fourth_post.image }}{% else %}{{ fourth_post.image | absolute_url }}{% endif %}" alt="{{ fourth_post.title }}">
+                        {% else %}
+                        <img class="w-100" src="assets/images/default_thumbnail.png">
+                        {% endif %}
+                    </a>
                 </div>
-                {% endif %}                
                 <div class="col-md-8">
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{fourth_post.url}}">{{ fourth_post.title }}</a>
