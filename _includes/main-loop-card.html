@@ -4,7 +4,7 @@
 	<a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
 	</h2>
 	<p class="excerpt">
-	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
+	   {{ post.excerpt | markdownify | strip_html | strip_newlines | truncate: 186}}
 	</p>
 	<small class="text-muted">
 		{{ post.date | date: '%Y년 %m월 %d일' }}
