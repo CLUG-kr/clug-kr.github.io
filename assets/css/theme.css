@@ -812,3 +812,9 @@ div.a2a_full_footer {display:none;}
 	background-position: center;
 	background-size: cover;
 }
+
+@media (max-width: 576px) {
+	.small-hide{
+		display: none;
+	}
+}
