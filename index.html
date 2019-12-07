@@ -54,7 +54,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
             <div class="col-md-4">
                 <a href="{{site.baseurl}}{{second_post.url}}">
                     {% if second_post.image %}
-                    <img class="w-100" src="{% if second_post.image contains "://" %}{{ second_post.image }}{% else %}{{ second_post.image | absolute_url }}{% endif %}" alt="{{ second_post.title }}">
+                    <img class="w-100" src="{{ second_post.image }}" alt="{{ second_post.title }}">
                     {% else %}
                     <img class="w-100" src="assets/images/default_thumbnail.png">
                     {% endif %}
@@ -76,7 +76,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
                 <div class="col-md-4">
                     <a href="{{site.baseurl}}{{third_post.url}}">
                         {% if third_post.image %}
-                        <img class="w-100" src="{% if third_post.image contains "://" %}{{ third_post.image }}{% else %}{{ third_post.image | absolute_url }}{% endif %}" alt="{{ third_post.title }}">
+                        <img class="w-100" src="{{ third_post.image }}" alt="{{ third_post.title }}">
                         {% else %}
                         <img class="w-100" src="assets/images/default_thumbnail.png">
                         {% endif %}
@@ -98,7 +98,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
                 <div class="col-md-4">
                     <a href="{{site.baseurl}}{{second_post.url}}">
                         {% if fourth_post.image %}
-                        <img class="w-100" src="{% if fourth_post.image contains "://" %}{{ fourth_post.image }}{% else %}{{ fourth_post.image | absolute_url }}{% endif %}" alt="{{ fourth_post.title }}">
+                        <img class="w-100" src="{{ fourth_post.image }}" alt="{{ fourth_post.title }}">
                         {% else %}
                         <img class="w-100" src="assets/images/default_thumbnail.png">
                         {% endif %}
