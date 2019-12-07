@@ -25,9 +25,9 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     <div class="card border-0 mb-4 box-shadow">   
     <a href="{{site.baseurl}}{{latest_post.url}}">
     {% if latest_post.image %}
-    <div class="topfirstimage" style="background-image: url({% if latest_post.image contains "://" %}{{ latest_post.image }}{% else %} {{site.baseurl}}/{{ latest_post.image}}{% endif %}); height: 200px;    background-size: cover;    background-repeat: no-repeat;background-position:center;"></div>
+    <div class="image" style="background-image: url({{ latest_post.image }}); padding-bottom: 40%;"></div>
     {% else %}
-    <div class="topfirstimage" style="background-image: url(assets/images/default_thumbnail.png); height: 200px;    background-size: cover;    background-repeat: no-repeat;background-position:center;"></div>
+    <div class="image" style="background-image: url(assets/images/default_thumbnail.png); padding-bottom: 40%;"></div>
     {% endif %}
     </a>
     <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
@@ -54,9 +54,9 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
             <div class="col-md-4">
                 <a href="{{site.baseurl}}{{second_post.url}}">
                     {% if second_post.image %}
-                    <img class="w-100" src="{{ second_post.image }}" alt="{{ second_post.title }}">
+                    <div class="image" style="background-image: url('{{ second_post.image }}')"></div>
                     {% else %}
-                    <img class="w-100" src="assets/images/default_thumbnail.png">
+                    <div class="image" style="background-image: url('assets/images/default_thumbnail.png')"></div>
                     {% endif %}
                 </a>
             </div>
@@ -76,9 +76,9 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
                 <div class="col-md-4">
                     <a href="{{site.baseurl}}{{third_post.url}}">
                         {% if third_post.image %}
-                        <img class="w-100" src="{{ third_post.image }}" alt="{{ third_post.title }}">
+                        <div class="image" style="background-image: url('{{ third_post.image }}')"></div>
                         {% else %}
-                        <img class="w-100" src="assets/images/default_thumbnail.png">
+                        <div class="image" style="background-image: url('assets/images/default_thumbnail.png')"></div>
                         {% endif %}
                     </a>
                 </div>
@@ -98,9 +98,9 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
                 <div class="col-md-4">
                     <a href="{{site.baseurl}}{{second_post.url}}">
                         {% if fourth_post.image %}
-                        <img class="w-100" src="{{ fourth_post.image }}" alt="{{ fourth_post.title }}">
+                        <div class="image" style="background-image: url('{{ fourth_post.image }}')"></div>
                         {% else %}
-                        <img class="w-100" src="assets/images/default_thumbnail.png">
+                        <div class="image" style="background-image: url('assets/images/default_thumbnail.png')"></div>
                         {% endif %}
                     </a>
                 </div>

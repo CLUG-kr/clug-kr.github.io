@@ -1,21 +1,21 @@
 <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
-	</h2>
-	<p class="excerpt">
-	   {{ post.excerpt | markdownify | strip_html | strip_newlines | truncate: 186}}
-	</p>
-	<small class="text-muted">
-		{{ post.date | date: '%Y년 %m월 %d일' }}
-	</small>
-</div>
+	<div class="col-md-9 pr-3">
+		<h2 class="mb-1 h5 font-weight-bold">
+		<a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+		</h2>
+		<p class="excerpt">
+		   {{ post.excerpt | markdownify | strip_html | strip_newlines | truncate: 186}}
+		</p>
+		<small class="text-muted">
+			{{ post.date | date: '%Y년 %m월 %d일' }}
+		</small>
+	</div>
 	<div class="col-md-3 pr-0 text-right">
 		<a href="{{site.baseurl}}{{post.url}}">
 			{% if post.image %}
-			<img class="w-100" src="{{ post.image }}" alt="{{ post.title }}">
+			<div class="image" style="background-image: url('{{ post.image }}')"></div>
 			{% else %}
-			<img class="w-100" src="assets/images/default_thumbnail.png" alt="thumbnail">
+			<div class="image" style="background-image: url('assets/images/default_thumbnail.png')"></div>
 			{% endif %}
 		</a>
 	</div>
