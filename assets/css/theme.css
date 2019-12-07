@@ -804,4 +804,11 @@ div.a2a_full_footer {display:none;}
 		 height:280px !Important;
 	 }
  }
- 
+
+.image{
+	width: 100%;
+	padding-bottom: 62%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
