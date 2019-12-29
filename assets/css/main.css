@@ -5289,7 +5289,7 @@ button.bg-lightblue:focus {
   display: inline-flex !important; }
 
 .main-bg{
-  background-image: url(/assets/images/bg.png);
+  background-image: url(/assets/images/bg.jpg);
   background-size: cover;
   background-position: center;
   padding-bottom: 60% !important;
